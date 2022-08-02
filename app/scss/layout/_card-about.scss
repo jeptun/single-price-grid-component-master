@@ -1,0 +1,29 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.card-about {
+  background-color: g.$cyan-up;
+  color: g.$white;
+  padding: u.rem(34);
+  border-radius: 0 0 u.rem(8) u.rem(8);
+
+  @include u.breakpoint-up(small) {
+    border-radius: 0 0 u.rem(8) 0;
+  }
+}
+.card-table {
+  width: 100%;
+  display: flex;
+
+  th {
+    font-size: u.rem(18);
+    font-weight: 400;
+    padding-bottom: u.rem(10);
+  }
+  td {
+    font-size: u.rem(14);
+    font-weight: 400;
+    line-height: 1.4;
+    color: g.$white-up;
+  }
+}

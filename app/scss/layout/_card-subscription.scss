@@ -1,0 +1,47 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+@use "../mixin/" as m;
+
+.card-subscription {
+  display: grid;
+  background-color: g.$cyan;
+  color: g.$white;
+  padding: u.rem(34);
+  border-radius: 0;
+
+  @include u.breakpoint-up(small) {
+    border-radius: 0 0 0 u.rem(8);
+  }
+}
+.card-subscription-title {
+  font-size: u.rem(18);
+}
+.card-subscription-price-wrapper {
+  display: flex;
+  align-items: center;
+}
+.card-subscription-price {
+  font-size: u.rem(28);
+  font-weight: 700;
+  margin-right: u.rem(12);
+}
+.card-subscription-date {
+  color: g.$white-up;
+}
+.card-subscription-description {
+  font-size: u.rem(16);
+  font-weight: 400;
+}
+.btn-green {
+  @include m.button-bg(g.$bright-Yellow);
+  margin: u.rem(15) 0 u.rem(15) 0;
+  color: g.$white;
+  font-weight: 700;
+  align-items: stretch;
+  border-radius: u.rem(6);
+}
+
+.btn-green:hover,
+.btn-green:focus {
+  @include m.button-bg(g.$bring-yellow-up);
+}

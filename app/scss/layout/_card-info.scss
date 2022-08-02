@@ -1,0 +1,23 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.card-info {
+  background-color: g.$white;
+  padding: u.rem(34);
+    border-radius: u.rem(8) u.rem(8) 0 0;
+}
+.card-info-title {
+  color: g.$cyan;
+  font-size: u.rem(28);
+  font-weight: 700;
+}
+.card-info-subtile {
+  color: g.$bright-Yellow;
+  font-size: u.rem(18);
+  font-weight: 700;
+}
+.card-info-description {
+  color: g.$grayish-Blue;
+  font-size: u.rem(16);
+  font-weight: 400;
+}

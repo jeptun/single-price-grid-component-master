@@ -1,0 +1,28 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.card-widget {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: u.rem(16);
+ 
+
+
+  @include u.breakpoint-up(small) {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    max-width: u.rem(630);
+    grid-auto-columns: auto;
+   
+  }
+}
+.card-info {
+  grid-column: span 12;
+
+}
+.card-subscription,
+.card-about {
+  grid-column: span 6;
+}
